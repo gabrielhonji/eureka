@@ -1,9 +1,13 @@
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 function Signup() {
   const toggleDarkMode = () => {
     document.body.classList.toggle('dark')
   }
+
+  const [passwordView, setPasswordView] = useState(false);
 
   const navigate = useNavigate();
   
@@ -28,11 +32,24 @@ function Signup() {
           </div>
           <div className="flex flex-col">
             <label htmlFor="password">Senha:</label>
-            <input className="input-component secondary-color" placeholder="Senha:" type="password" id="password" name="password" />
+            <div className="input-container secondary-color flex">
+              <input className="input-field" placeholder="Senha:" type={passwordView ? 'text' : 'password'} id="password" name="password" />
+              <button onClick={() => setPasswordView(!passwordView)} className="input-button" type="button">
+                {
+                  passwordView ?
+                  <IconEye size={28} stroke={1}/>
+                  :
+                  <IconEyeOff size={28} stroke={1}/>
+                }
+              </button>
+            </div>
           </div>
-          <span className="text-xs">Ao cadastrar-se, você aceita os termos de uso. <a href='https://www.instagram.com/gabriel.honji/' className="emphasis-primary">Ler termos.</a></span>
+          <div className="flex gap-1">
+            <span className="text-xs">Ao cadastrar-se, você aceita os termos de uso.</span>
+            <button className="emphasis-primary text-xs" type="button" onClick={() => navigate('instagram.com/gabriel.honji')} >Ler termos.</button>
+          </div>
         </div>
-        <button className="button-component tertiary-color" type="submit">Cadastrar-se</button>
+        <button className="button-component tertiary-color" type="submit">Conectar-se</button>
       </form>
       <div className="flex mx-auto w-fit gap-1">
         <h5>Já tem uma conta?</h5>
@@ -42,4 +59,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default Signup;

@@ -1,10 +1,13 @@
-// import { IconEye, IconEyeOff } from "@tabler/icons-react";
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 function Login() {
   const toggleDarkMode = () => {
     document.body.classList.toggle('dark')
   }
+
+  const [passwordView, setPasswordView] = useState(false);
 
   const navigate = useNavigate();
   
@@ -29,9 +32,17 @@ function Login() {
           </div>
           <div className="flex flex-col">
             <label htmlFor="password">Senha:</label>
-            <input className="input-component secondary-color" placeholder="Senha:" type="password" id="password" name="password" />
-            {/* <IconEye size={24} color='red' stroke={3}/>
-            <IconEyeOff size={24} color='red' stroke={3}/> */}
+            <div className="input-container secondary-color flex">
+              <input className="input-field" placeholder="Senha:" type={passwordView ? 'text' : 'password'} id="password" name="password" />
+              <button onClick={() => setPasswordView(!passwordView)} className="input-button" type="button">
+                {
+                  passwordView ?
+                  <IconEye size={28} stroke={1}/>
+                  :
+                  <IconEyeOff size={28} stroke={1}/>
+                }
+              </button>
+            </div>
           </div>
           <button className="hover-emphasis-primary font-medium text-left" type="button" onClick={() => navigate('/recovery')} >Esqueceu a senha?</button>
         </div>
@@ -45,4 +56,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;

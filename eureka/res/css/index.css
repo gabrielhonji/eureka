@@ -58,10 +58,19 @@ span {
 .input-component {
   @apply h-16 px-6;
 }
+.input-container {
+  @apply h-16 pl-6;
+}
+.input-field {
+  @apply bg-transparent w-full;
+}
+.input-button {
+  @apply text-slate-950 dark:text-neutral-50 dark:hover:text-primary-600 hover:text-primary-700 z-10 p-4 rounded-xl;
+}
 
 /* Style */
 .secondary-color {
-  @apply bg-transparent border border-slate-950 dark:border-neutral-50 rounded-xl hover:border-2 hover:border-primary-700 dark:hover:border-primary-700 focus:border-primary-600 dark:focus:border-primary-600 focus:border-2;
+  @apply bg-transparent border border-slate-950 dark:border-neutral-50 rounded-xl hover:border-2 hover:border-primary-700 dark:hover:border-primary-700 focus-within:border-primary-600 dark:focus-within:border-primary-600 focus-within:border-2;
 }
 .tertiary-color {
   @apply bg-slate-950 dark:bg-neutral-50 dark:hover:bg-neutral-300 text-neutral-50 dark:text-slate-950 h-16 rounded-xl hover:bg-slate-800;
