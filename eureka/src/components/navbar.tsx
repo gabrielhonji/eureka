@@ -12,7 +12,7 @@ const Navbar = () => {
         <path d="M17.9986 5.53472L35.5997 0.349121L30.464 18.0001L35.5997 35.6012L17.9986 30.4655L0.347656 35.6012L5.53325 18.0001L0.347656 0.349121L17.9986 5.53472Z"/>
       </svg>
       <h2 className="font-bold">EUREKA</h2>
-      <button type="button" onClick={() => ToggleColorScheme()}>TOGGLE COLOR</button>
+      <button className='toggle-color' type="button" onClick={() => ToggleColorScheme()}>TOGGLE COLOR</button>
     </nav>
   )
 }
