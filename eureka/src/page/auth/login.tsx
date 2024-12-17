@@ -1,25 +1,16 @@
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import Navbar from "../../components/navbar";
 
 function Login() {
-  const toggleDarkMode = () => {
-    document.body.classList.toggle('dark')
-  }
-
   const [passwordView, setPasswordView] = useState(false);
 
   const navigate = useNavigate();
   
   return (
     <div className="content">
-      <nav className="flex gap-4 p-16 items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" className="fill-slate-950 dark:fill-neutral-50" fill="none">
-          <path d="M17.9986 5.53472L35.5997 0.349121L30.464 18.0001L35.5997 35.6012L17.9986 30.4655L0.347656 35.6012L5.53325 18.0001L0.347656 0.349121L17.9986 5.53472Z"/>
-        </svg>
-        <h2 className="space-grotesk-font font-bold">EUREKA</h2>
-        <button type="button" onClick={() => toggleDarkMode()}>TOGGLE COLOR</button>
-      </nav>
+      <Navbar />
       <form className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Boa volta!</h1>
