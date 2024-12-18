@@ -30,7 +30,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
-      actions: read
+      actions: write
     environment:
       name: github-pages
       url: 'https://gabrielhonji.github.io/eureka/'
