@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload GitHub Pages artifact       
-        uses: actions/upload-pages-artifact@master
+        uses: actions/upload-pages-artifact@3
         with:
           name: page
           path: dist/.
@@ -30,6 +30,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      actions: read
     environment:
       name: github-pages
       url: 'https://gabrielhonji.github.io/eureka/'
