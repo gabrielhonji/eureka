@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '22'
       - name: Go to directory
-        run: cd .\eureka\
+        run: ls
       - name: Install Dependencies
         run: npm i
       - name: Build
