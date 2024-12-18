@@ -6,6 +6,7 @@ import '../res/css/index.css';
 
 import App from './App';
 import Login from './page/auth/login';
+import Recovery from './page/auth/recovery';
 import Signup from './page/auth/signup';
 import Error from './page/error';
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
+  },
+  {
+    path: '/recovery',
+    element: <Recovery />
   },
 ])
 

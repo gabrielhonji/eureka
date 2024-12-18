@@ -25,14 +25,16 @@ function Login() {
             <label htmlFor="password">Senha:</label>
             <div className="input-container secondary-color flex">
               <input className="input-field" placeholder="Senha:" type={passwordView ? 'text' : 'password'} id="password" name="password" />
-              <button onClick={() => setPasswordView(!passwordView)} className="input-button" type="button">
-                {
-                  passwordView ?
-                  <IconEye size={28} stroke={1}/>
-                  :
-                  <IconEyeOff size={28} stroke={1}/>
-                }
-              </button>
+              <label htmlFor="password">
+                <button onClick={() => setPasswordView(!passwordView)} className="input-button" type="button">
+                  {
+                    passwordView ?
+                    <IconEye size={28} stroke={1}/>
+                    :
+                    <IconEyeOff size={28} stroke={1}/>
+                  }
+                </button>
+              </label>
             </div>
           </div>
           <button className="hover-emphasis-primary font-medium text-left" type="button" onClick={() => navigate('/recovery')} >Esqueceu a senha?</button>
