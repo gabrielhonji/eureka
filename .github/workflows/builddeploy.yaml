@@ -20,9 +20,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload GitHub Pages artifact       
-        uses: actions/upload-pages-artifact@v3.0.1
-        # with:
-        #   path: 'build/.'
+        uses: actions/upload-pages-artifact@master
+        with:
+          name: page
+          path: build/.
+          if-no-files-found: error
   deploy:
     needs: build
     runs-on: ubuntu-latest
