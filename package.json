@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": false,
-  "homepage": "https://kinneko-de.github.io/sample-react-typescript-githubpages/",
+  "homepage": "https://gabrielhonji/eureka/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
