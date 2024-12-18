@@ -23,8 +23,7 @@ jobs:
         uses: actions/upload-pages-artifact@master
         with:
           name: page
-          path: build/.
-          if-no-files-found: error
+          path: dist/.
   deploy:
     needs: build
     runs-on: ubuntu-latest
