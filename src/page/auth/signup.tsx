@@ -8,10 +8,14 @@ function Signup() {
 
   const navigate = useNavigate();
   
+  const HandleSignup = () => {
+    return navigate('/register/subjects')
+  }
+
   return (
     <div className="content">
       <Navbar />
-      <form className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
+      <form onSubmit={HandleSignup} className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Bem vindo!</h1>
           <p>Faça o cadastro para continuar</p>
@@ -42,7 +46,7 @@ function Signup() {
             <button className="emphasis-primary text-xs" type="button" onClick={() => navigate('instagram.com/gabriel.honji')} >Ler termos.</button>
           </div>
         </div>
-        <button className="button-component tertiary-color" type="submit">Conectar-se</button>
+        <button className="button-component tertiary-color" type="submit">Cadastrar-se</button>
       </form>
       <div className="flex mx-auto w-fit gap-1">
         <h5>Já tem uma conta?</h5>

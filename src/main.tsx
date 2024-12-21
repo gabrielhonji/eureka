@@ -4,16 +4,16 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import '../res/css/index.css';
 
-import App from './App';
 import Login from './page/auth/login';
 import Recovery from './page/auth/recovery';
 import Signup from './page/auth/signup';
 import Error from './page/error';
+import RegisterSubjects from './page/subjects/register-subjects';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Login />,
     errorElement: <Error />
   },
   {
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/recovery',
     element: <Recovery />
+  },
+  {
+    path: '/register/subjects',
+    element: <RegisterSubjects />
   },
 ])
 

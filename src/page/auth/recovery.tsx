@@ -8,10 +8,14 @@ function Recovery() {
 
   const navigate = useNavigate();
   
+  const HandleRecovery = () => {
+    return navigate('/register/subjects')
+  }
+
   return (
     <div className="content">
       <Navbar />
-      <form className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
+      <form onSubmit={HandleRecovery} className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Redefinir</h1>
           <p>Defina uma nova senha para sua conta</p>

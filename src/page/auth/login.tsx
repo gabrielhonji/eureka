@@ -7,11 +7,15 @@ function Login() {
   const [passwordView, setPasswordView] = useState(false);
 
   const navigate = useNavigate();
+
+  const HandleLogin = () => {
+    return navigate('/register/subjects')
+  }
   
   return (
     <div className="content">
       <Navbar />
-      <form className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
+      <form onSubmit={HandleLogin} className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Boa volta!</h1>
           <p>Faça o login para continuar</p>
