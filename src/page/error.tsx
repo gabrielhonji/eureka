@@ -6,7 +6,7 @@ function Error() {
   
   return (
     <div className="content">
-      <Navbar />
+      <Navbar route="none" />
       <div className="flex justify-center items-center gap-32 mt-[10%]">
         <svg xmlns="http://www.w3.org/2000/svg" className="max-w-96 fill-slate-950 dark:fill-neutral-50" viewBox="0 0 447 385" fill="none">
           <path d="M152.51 383.59C146.206 385.744 139.001 381.475 136.495 374.071L97.4964 259.81L120.285 252.014L159.323 366.433C161.828 373.758 158.774 381.435 152.51 383.59Z"/>

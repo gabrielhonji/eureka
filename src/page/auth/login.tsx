@@ -14,7 +14,7 @@ function Login() {
   
   return (
     <div className="content">
-      <Navbar />
+      <Navbar route="none" />
       <form onSubmit={HandleLogin} className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Boa volta!</h1>

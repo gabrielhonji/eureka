@@ -7,6 +7,7 @@ import '../res/css/index.css';
 import Login from './page/auth/login';
 import Recovery from './page/auth/recovery';
 import Signup from './page/auth/signup';
+import Home from './page/dashboard/home';
 import Error from './page/error';
 import RegisterSubjects from './page/subjects/register-subjects';
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/register/subjects',
     element: <RegisterSubjects />
+  },
+  {
+    path: '/home',
+    element: <Home />
   },
 ])
 

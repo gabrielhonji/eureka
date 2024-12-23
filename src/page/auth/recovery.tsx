@@ -14,7 +14,7 @@ function Recovery() {
 
   return (
     <div className="content">
-      <Navbar />
+      <Navbar route="none" />
       <form onSubmit={HandleRecovery} className="flex flex-col gap-8 max-w-[400px] m-auto mb-8">
         <div>
           <h1>Redefinir</h1>
